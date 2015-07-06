@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+
+    "name": "Wechat manager",
+    "description": "Wechat manager",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popups/popup.html",
+        "default_title": "Click"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ],
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "css": [
+            "content-scripts/wechat.css"
+        ],
+        "js": [
+            "content-scripts/jquery.js",
+            "content-scripts/bililiteRange.js",
+            "content-scripts/jquery.sendkeys.js",
+            "content-scripts/wechat.js"
+        ]
+    }],
+    "background": {
+        "scripts": [
+            "bg/background.js"
+        ]
+    },
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "storage",
+        "unlimitedStorage"
+    ]
+}

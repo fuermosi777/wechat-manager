@@ -1,0 +1,26 @@
+html,
+body {
+    margin: 0
+}
+
+.main {
+    width: 200px;
+}
+
+.btn:focus {
+    outline: 0;
+    border-radius: 0;
+}
+
+/* contact list button */
+.get-contact-list-button,
+.get-contact-list-button:focus {
+    background-color: rgba(60, 175, 54, 1);
+    border-color: rgba(60, 175, 54, 1);
+    color: white;
+}
+
+.get-contact-list-button:hover {
+    color: white;
+}
+
